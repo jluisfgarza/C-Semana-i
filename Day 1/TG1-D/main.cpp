@@ -1,8 +1,8 @@
 /**
-Escribe una función que dados dos strings que llegan de cómo parámetros,
-regrese booleano diciendo si uno es la permutación del otro.
+Escribe una funciï¿½n que dados dos strings que llegan de cï¿½mo parï¿½metros,
+regrese booleano diciendo si uno es la permutaciï¿½n del otro.
 
-Los strings de entrada solo tiene letras en mayúsculas del alfabeto americano.
+Los strings de entrada solo tiene letras en mayï¿½sculas del alfabeto americano.
 
 Ejemplo Entrada:
 ABCDXYZ
@@ -25,13 +25,17 @@ int main()
     cin >> str;
     cin >> str2;
 
-    sort(str.begin(), str.end());
-    sort(str2.begin(), str2.end());
+    if (str.length() == str2.length())
+    {
+      sort(str.begin(), str.end());
+      sort(str2.begin(), str2.end());
 
-    if (str.compare(str2) == 0)
-        cout << "true";
+      if (str.compare(str2) == 0)
+      cout << "true";
+      else
+      cout << "false";
+    }
     else
-        cout << "false";
-
+      cout << "false";
     return 0;
 }
