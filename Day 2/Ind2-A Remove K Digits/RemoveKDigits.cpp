@@ -2,8 +2,9 @@ class Solution {
 public:
   string removeKdigits(string num, int k) {
         string str;
-        int n = num.size(), keep = n - k;
-        for (char c : num) {
+        int n = num.size();
+
+      for (char c : num) {
           // k is a number other than 0
             while (k > 0 && !str.empty() && str.back() > c)
             {
